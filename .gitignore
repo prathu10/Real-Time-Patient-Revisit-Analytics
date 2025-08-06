@@ -1,1 +1,33 @@
-venv/ 
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints
+
+# Environment
+venv/
+env/
+ENV/
+*.env
+
+# Data and models
+*.csv
+*.json
+*.pkl
+*.h5
+*.sqlite3
+*.log
+
+# VS Code
+.vscode/
+
+# Power BI
+*.pbix
+
+# OS
+.DS_Store
+Thumbs.db
+
