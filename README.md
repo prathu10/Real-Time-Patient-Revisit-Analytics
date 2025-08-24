@@ -156,6 +156,8 @@ The API will be available at http://localhost:5000/
 
 🌐 Fully integrated REST API + Power BI dashboards for interactive healthcare insights.
 
-### 👨‍💻 Author
-Prathamesh Sonawane
-M.S. in Computer Science | The University of Utah
+## 🙌 Connect with me on [LinkedIn] — feel free to reach out with any questions, suggestions, or if you'd like to collaborate on adding new features!
+## Author: Prathamesh Sonawane
+Contact: [LinkedIn](https://www.linkedin.com/in/prathsonawane/) | prathamesh4402@gmail.com
+
+
