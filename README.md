@@ -1,31 +1,29 @@
-# LiveReadmitML-Real-Time-Readmission-Prediction-with-Power-BI
+# Real-Time-Patient-Revisit-Analytics
 
-> A real-time hospital readmission prediction system using machine learning, deployed via Flask API, and integrated with Power BI for live analytics and visualization.
-
+> An end-to-end machine learning system for predicting hospital readmissions in real time, deployed using Flask API and connected to Power BI for live reporting and visualization.
 ---
 
 ### 📌 Project Overview
 
-Hospital readmissions are a major indicator of healthcare quality and cost efficiency. This project aims to **predict the likelihood of patient readmission within 30 days** using clinical and demographic data. By combining **scikit-learn**, **Flask**, and **Power BI**, we deliver an end-to-end system for **real-time inference and dashboard monitoring**.
+Hospital readmissions are a critical measure of healthcare efficiency and cost. This project focuses on forecasting whether a patient will be readmitted within 30 days based on demographic and clinical information. Leveraging scikit-learn, Flask, and Power BI, the solution provides real-time predictions alongside interactive dashboards for monitoring outcomes.
 
 ---
 
-### 🧠 Core Objectives
+### 🧠 Key Goals
 
-- 🔍 Analyze and preprocess medical data to identify key predictors of readmission.
-- 🧪 Train and optimize machine learning models using **scikit-learn v1.7.1**.
-- 🚀 Deploy the model through a **Flask API** for real-time prediction requests.
-- 📡 Connect the API with **Power BI** for live data visualization and decision-making support.
-
+- 🔎 Clean, transform, and analyze patient data to identify major risk factors.
+- 🧪 Train and fine-tune ML models using **scikit-learn v1.7.1**.
+- 🚀 Expose the model through a Flask-based REST API for instant inference.
+- 📡 Integrate with Power BI to deliver real-time decision support via dashboards.
 ---
 
-### ⚙️ Features
+### ⚙️ Main Features
 
-- ✅ Real-time REST API for prediction (`/predict`)
-- ✅ Binary classification: "Readmitted" vs "Not Readmitted"
-- ✅ Probability confidence score
-- ✅ Power BI dashboard integration
-- ✅ Fully compatible with `scikit-learn==1.7.1`
+- ✅ Real-time API endpoint for predictions (`/predict`)
+- ✅ Binary output: "Readmitted" or "Not Readmitted"
+- ✅ Seamless Power BI integration for live analytics
+- ✅ Probability score for prediction confidence
+- ✅ Built with `scikit-learn==1.7.1` for compatibility
 
 ---
 
@@ -33,10 +31,10 @@ Hospital readmissions are a major indicator of healthcare quality and cost effic
 
 | Category             | Technologies Used                             |
 |----------------------|-----------------------------------------------|
-| 💻 Machine Learning   | `scikit-learn`, `pandas`, `numpy`             |
+| 💻 Machine Learning   | `scikit-learn`, `numpy`, `pandas`,              |
 | 🧪 Model Algorithms   | Random Forest, Logistic Regression            |
 | 🌐 API Deployment     | `Flask`, `joblib`                             |
-| 📈 Visualization      | `Power BI` via API integration                |
+| 📈 Visualization      | `Power BI` through API integration                |
 | 🛠️ Others             | `matplotlib`, `seaborn`, `requests`, `json`  |
 
 ---
@@ -46,13 +44,13 @@ Hospital readmissions are a major indicator of healthcare quality and cost effic
 
 ---
 
-### 🧪 Model Training Summary
+### 🧪 Model Development
 
 - **Dataset Used:** [Diabetes Readmission Dataset (UCI/Kaggle)](https://www.kaggle.com/datasets/aaron7sun/diabetes-health-indicators-dataset)
 - **Target Variable:** Readmission within 30 days
-- **Model:** Random Forest Classifier
-- **Accuracy Achieved:** ~82%
-- **Metrics Used:** Accuracy, ROC-AUC, Confusion Matrix
+- **Primary Model:** Random Forest Classifier
+- **Accuracy:** ~82%
+- **Evaluation Metrics:** Accuracy, ROC-AUC, Confusion Matrix
 
 ---
 
@@ -64,28 +62,29 @@ Hospital readmissions are a major indicator of healthcare quality and cost effic
 POST /predict
 Content-Type: application/json
 ```
-### 📥 Input Payload (Example)
+### 📥 Example Input:
 json
 ```
 {
-  "age": 45,
-  "gender": "Male",
-  "admission_type": "Emergency",
-  "diagnosis": "Diabetes",
-  "num_lab_procedures": 35,
-  "num_medications": 12,
-  "time_in_hospital": 4,
-  "number_outpatient": 0,
-  "number_emergency": 1,
-  "number_inpatient": 0
+  "age": 72,
+  "gender": "Female",
+  "admission_type": "Elective",
+  "diagnosis": "Hypertension",
+  "num_lab_procedures": 20,
+  "num_medications": 8,
+  "time_in_hospital": 3,
+  "number_outpatient": 1,
+  "number_emergency": 0,
+  "number_inpatient": 1
 }
+
 ```
 ### 📤 API Response
 json
 ```
 {
-  "readmitted": "yes",
-  "probability": 0.8743
+  "readmitted": "no",
+  "probability": 0.2317
 }
 ```
 
@@ -96,7 +95,7 @@ json
 
 - Dashboards include:
 
-  * Readmission risk by age, diagnosis
+  * Risk distribution by age and diagnosis
 
   * Risk vs length of stay
   
@@ -104,20 +103,20 @@ json
 
 - To Use:
 
-  * Open the PBIX file in Power BI Desktop.
-  
-  * Set up the web connection to http://127.0.0.1:5000/predict.
-  
-  * Input test data via Power BI interface or direct API link.
-  
-  * View real-time predictions and insights.
+  *Open .pbix file in Power BI Desktop
+
+  *Point the data source to http://127.0.0.1:5000/predict
+
+  *Provide test inputs via Power BI or API request
+
+  *View live predictions and insights
 
 ### 🛠 Setup Instructions
 1. Clone the Repository
 bash
 ```
-git clone https://github.com/yourusername/LiveReadmitML-Real-Time-Readmission-Prediction-with-Power-BI.git
-cd LiveReadmitML-Real-Time-Readmission-Prediction-with-Power-BI
+git clone https://github.com/prathu10/Real-Time-Patient-Revisit-Analytics.git
+cd Real-Time-Patient-Revisit-Analytics
 ```
 
 2. Create a Virtual Environment
@@ -143,20 +142,20 @@ python app.py
 
 The API will be available at http://localhost:5000/
 
-### 🧪 Power BI Configuration
+### 🧪 Configure Power BI
 - Open PowerBI/real-time-dashboard.pbix
 
 - Edit the data source to point to your local Flask API (http://localhost:5000/predict)
 
 - Trigger predictions using sample data and view real-time results
 
-### 🏆 Achievements
-📌 Published project titled "LiveReadmitML - Real-Time Readmission Prediction with Power BI" as a real-time hospital analytics solution.
+### 🏆 Highlights
+📌 Built as a real-time healthcare analytics solution for hospital readmission prediction.
 
-📈 Achieved 82% model accuracy after preprocessing, feature engineering, and hyperparameter tuning.
+📈 Achieved 82% prediction accuracy with thorough preprocessing and hyperparameter tuning.
 
-🌐 Integrated real-time RESTful API with Power BI for predictive healthcare visualization.
+🌐 Fully integrated REST API + Power BI dashboards for interactive healthcare insights.
 
 ### 👨‍💻 Author
-Rohitkumar Jha
-M.S. in Computer Science – Cybersecurity | The George Washington University
+Prathamesh Sonawane
+M.S. in Computer Science | The University of Utah
