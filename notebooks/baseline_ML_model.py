@@ -23,7 +23,7 @@ print("scikit-learn version:", sklearn.__version__)
 # In[ ]:
 
 
-data = pd.read_csv('./data/datacleaned_hospital_readmissions.csv')
+data = pd.read_csv('../data/datacleaned_hospital_readmissions.csv')
 data.head()
 
 
@@ -144,8 +144,8 @@ print("Best Params:", best_params, "| Best ROC-AUC:", best_auc)
 
 
 import joblib
-joblib.dump(best_rf, './data/ML Model/readmission_rf_model2.pkl')
-joblib.dump(x_train.columns.tolist(), './data/ML Model/model_columns.pkl')
+joblib.dump(best_rf, '../ML Model/readmission_rf_model2.pkl')
+joblib.dump(x_train.columns.tolist(), '../ML Model/model_columns.pkl')
 
 
 # In[ ]:

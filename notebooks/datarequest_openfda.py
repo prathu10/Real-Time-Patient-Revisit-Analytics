@@ -13,7 +13,7 @@ import csv
 
 os.makedirs("notebooks", exist_ok=True)
 url = "https://api.fda.gov/drug/event.json?search=seriousnesshospitalization:1&limit=1"
-csv_path = "./data/livepredictions.csv"
+csv_path = "../data/livepredictions.csv"
 
 age_groups = [
     "[0-10)", "[10-20)", "[20-30)", "[30-40)", "[40-50)",

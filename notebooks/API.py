@@ -28,8 +28,8 @@ app=Flask(__name__)
 # In[ ]:
 
 
-model = joblib.load("./data/ML Model/readmission_rf_model2.pkl")
-model_columns = joblib.load("./data/ML Model/model_columns.pkl")
+model = joblib.load("../ML Model/readmission_rf_model2.pkl")
+model_columns = joblib.load("../ML Model/model_columns.pkl")
 
 
 # In[5]:
