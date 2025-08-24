@@ -89,7 +89,7 @@ json
 ```
 
 ### 📊 Power BI Dashboard
-- File: powerbi/powerbi_dashboard.pbix
+- File: data/livepredictions_visualization.pbix
 
 - Connects live to Flask API
 
