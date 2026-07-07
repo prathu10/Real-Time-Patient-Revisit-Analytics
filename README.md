@@ -9,6 +9,14 @@ Hospital readmissions are a critical measure of healthcare efficiency and cost. 
 
 ---
 
+## 📊 Dashboard Preview
+
+<p align="center">
+  <img src="dashboard 1.png" width="900">
+</p>
+
+
+
 ### 🧠 Key Goals
 
 - 🔎 Clean, transform, and analyze patient data to identify major risk factors.
